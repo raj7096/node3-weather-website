@@ -22,7 +22,7 @@ app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res)=>{
     res.render('index',{
-        title:'weather',
+        title:'Weather',
         name:'Raj Rathore'
     })
 })
@@ -36,7 +36,7 @@ app.get('/about',(req,res)=>{
 
 app.get('/help',(req,res)=>{
     res.render('help',{
-        helptext:'This Is Some Helpful Text.',
+        helptext:'For Any Help Or Query You Can Contact Me',
         title:'Help',
         name:'Raj Rathore'
     })
@@ -66,14 +66,6 @@ app.get('/Weather',(req, res)=>{
             })          
           })
         
-    })
-})
-
-app.get('/help/*',(req, res)=>{
-    res.render('404',{
-        title:'404',
-        name:'Raj Rathore',
-        errorMessage:'Help Article Not Found'
     })
 })
 
